@@ -1,15 +1,15 @@
 {
-  "name": "grunt-redis",
-  "description": "Redis file uploader",
+  "name": "grunt-redis-manifest",
+  "description": "Redis file uploader with manifest specification for each deploy",
   "version": "0.1.0",
   "homepage": "",
   "author": {
-    "name": "Chris Manson",
-    "email": "chris@bloo.ie"
+    "name": "Feifan Wang",
+    "email": "feifanw@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://girhub.com/Blooie/grunt-redis.git"
+    "url": "git@github.com:4thethrillofit/grunt-redis.git"
   },
   "bugs": {
     "url": ""

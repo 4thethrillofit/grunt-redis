@@ -58,6 +58,16 @@ module.exports = function(grunt) {
                 
                 promises.push(Q.ninvoke(client, "set", key, grunt.file.read(filepath)).then(function(){
                     grunt.log.debug("File uploaded " + key);
+                    // CUSTOM:
+                    // Store the deploy keys in a list, triming the list based on user option
+                    if (options.manifestKey && !options.manifestSize) {
+                      grunt.log.error("If you wish to use a manifest, please define a max manifestSize");
+                    } else if (options.manifestSize && !options.manifestKey) {
+                      grunt.log.error("You have defined a manifestSize, but no manifest");
+                    } else if (options.manifestKey && options.manifestSize) {
+                      client.lpush(options.manifestKey, options.currentDeployKey);
+                      client.ltrim(options.manifestKey, 0, options.manifestSize);
+                    }
                 }));
             });
             

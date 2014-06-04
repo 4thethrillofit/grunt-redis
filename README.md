@@ -1,3 +1,5 @@
+This is a fork of Blooie's [grunt-redis](https://github.com/Blooie/grunt-redis) task (see readme below). This fork allows the user to specify a manifest key and max size so the deploy keys are stored in the same redis instance as all previous deploys.
+
 # grunt-redis
 
 > Redis file uploader
