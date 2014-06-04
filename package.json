@@ -1,7 +1,7 @@
 {
   "name": "grunt-redis-manifest",
   "description": "Redis file uploader with manifest specification for each deploy",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "homepage": "",
   "author": {
     "name": "Feifan Wang",

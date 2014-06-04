@@ -1,5 +1,5 @@
 /*
- * grunt-redis
+ * grunt-redis-manifest
  * 
  *
  * Copyright (c) 2014 Chris Manson
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                     if (options.manifestKey && !options.manifestSize) {
                       grunt.log.error("If you wish to use a manifest, please define a max manifestSize");
                     } else if (options.manifestSize && !options.manifestKey) {
-                      grunt.log.error("You have defined a manifestSize, but no manifest");
+                      grunt.log.error("You have defined a manifestSize, but no manifestKey");
                     } else if (options.manifestKey && options.manifestSize) {
                       client.lpush(options.manifestKey, options.currentDeployKey);
                       client.ltrim(options.manifestKey, 0, options.manifestSize);

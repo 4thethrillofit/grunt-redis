@@ -1,5 +1,5 @@
 /*
- * grunt-redis
+ * grunt-redis-manifest
  * 
  *
  * Copyright (c) 2014 Chris Manson

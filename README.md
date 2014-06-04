@@ -1,6 +1,8 @@
-This is a fork of Blooie's [grunt-redis](https://github.com/Blooie/grunt-redis) task (see readme below). This fork allows the user to specify a manifest key and max size so the deploy keys are stored in the same redis instance as all previous deploys.
+This is a fork of [Blooie's grunt-redis](https://github.com/Blooie/grunt-redis) task (see readme below). This fork allows the user to specify a manifest key and max size so the deploy keys are stored in the same redis instance as all previous deploys.
 
-# grunt-redis
+See see my (blog post)[https://medium.com/@feifanw/df40cf105622] on zero-downtime Javascript app deployment for more detail.
+
+# grunt-redis-manifest
 
 > Redis file uploader
 
@@ -33,7 +35,9 @@ In your project's Gruntfile, add a section named `redis` to the data object pass
 grunt.initConfig({
   redis: {
     options: {
-      fullPath: Boolean, 
+      manifestKey: String,
+      manifestSize: Number,
+      fullPath: Boolean,
       prefix: String,
       host: String,
       port: Number,
