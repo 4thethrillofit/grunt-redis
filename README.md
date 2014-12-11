@@ -7,9 +7,9 @@ See see my (blog post)[https://medium.com/@feifanw/df40cf105622] on zero-downtim
 > Redis file uploader
 
 ## Introduction
-This package is inspired by [Luke Melia's](https://twitter.com/lukemelia) [slides about deploying javascript](https://speakerdeck.com/lukemelia/lightning-fast-deployment-of-your-rails-backed-javascript-app) mainly because there wasn't a way to upload a file using grunt. 
+This package is inspired by [Luke Melia's](https://twitter.com/lukemelia) [slides about deploying javascript](https://speakerdeck.com/lukemelia/lightning-fast-deployment-of-your-rails-backed-javascript-app) mainly because there wasn't a way to upload a file using grunt.
 
-This is a reasonably basic grunt plugin, with very little documentation but it works! PRs and Feature Requests welcome. 
+This is a reasonably basic grunt plugin, with very little documentation but it works! PRs and Feature Requests welcome.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.4`
@@ -17,13 +17,13 @@ This plugin requires Grunt `~0.4.4`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-redis --save-dev
+npm install grunt-redis-manifest --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-redis');
+grunt.loadNpmTasks('grunt-redis-manifest');
 ```
 
 ## The "redis" task
@@ -73,7 +73,7 @@ prefix all your keys with this
 grunt.initConfig({
   redis: {
     options: {
-      fullPath: true, 
+      fullPath: true,
       prefix: 'grunt:'
     },
     default: {
